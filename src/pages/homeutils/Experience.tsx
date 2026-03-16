@@ -4,162 +4,83 @@ import { FaLocationDot } from "react-icons/fa6";
 function Experience() {
   return (
     <div>
-      <div className=" px-4 flex flex-col justify-center items-center mt-[5vh] w-full ">
+      <div className="px-4 flex flex-col justify-center items-center mt-[5vh] w-full">
         <Animate delay={300} type="slideLeft">
-          <div>
-            <h2 className="text-4xl lg:text-[50px] font-semibold text-center">
-              Professional Experience
-            </h2>
-          </div>
+          <h2 className="text-4xl lg:text-[50px] font-semibold text-center">
+            Professional Experience
+          </h2>
         </Animate>
 
-        {/* Research Assistant */}
+        {/* AI-Powered NLP Internship */}
         <div className="mt-[5vh] flex flex-col gap-2 lg:w-[70vw]">
           <Animate delay={300} type="slideLeft">
             <div className="relative bg-blue-700 py-5 w-full flex flex-col lg:flex-row lg:items-center rounded-md px-6 font-semibold lg:gap-5">
-              <div className="lg:text-nowrap">Research Assistant</div>
+              <div className="lg:text-nowrap">AI-Powered NLP Intern</div>
               <div className="font-this text-foreground/80 text-sm w-full flex">
-                @ Texas Tech University <br className="lg:hidden" /> 2023 - Present
+                @ 
+                <a
+                  href="https://www.algotutor.io/"
+                  target="_blank"
+                  className="ml-1 text-primary underline"
+                >
+                  Algo Tutor Academy
+                </a>
+                <br className="lg:hidden" /> Jun 2025 – Aug 2025
               </div>
             </div>
           </Animate>
 
           <Animate delay={400} type="slideLeft">
             <div className="w-full px-6 py-3 bg-white rounded-md flex flex-col gap-5">
-              <div className="flex flex-col gap-3 lg:flex-row">
-                <div>
-                  <img src="texas.png" className="lg:ml-2 rounded-md w-42 h-20 object-cover" />
-                </div>
-                <div className="flex flex-col gap-3 lg:flex-row lg:items-center">
-                  <div className="flex items-center text-black">
-                    <FaLocationDot className="w-5 h-6 text-black mr-3" /> Lubbock, Texas
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div className="lg:max-w-[50vw] text-black">
-                  Developed AI-based fault detection for IEEE 9-bus transmission lines using CNN, ELM, and GNN. 
-                  Simulated faults in MATLAB-Simulink and optimized deep learning models for real-time monitoring.
-                </div>
+              <div className="lg:max-w-[50vw] text-black">
+                • Gained strong proficiency in NLP preprocessing including tokenization, stemming,
+                lemmatization, stop-word removal, and text normalization for high-quality ML inputs. <br />
+                • Implemented classical ML classifiers (Naive Bayes, SVM, Logistic Regression) and deep learning architectures (RNNs, LSTMs, Transformers); fine-tuned models like BERT and GPT for sentiment analysis, NER, and summarization tasks. <br />
+                • Built end-to-end NLP applications including chatbots, QA systems, and summarizers, optimizing performance (precision, recall, F1-score) achieving up to 89% accuracy.
               </div>
               <div className="flex flex-wrap flex-grow justify-between gap-3">
-                <div className="w-fit h-fit py-2 px-5 rounded-full bg-blue-700">
-                  MATLAB
-                </div>
-                <div className="w-fit h-fit py-2 px-5 rounded-full bg-blue-700">
-                  Simulink
-                </div>
-                <div className="w-fit h-fit py-2 px-5 rounded-full bg-blue-700">
-                  CNN/GNN
-                </div>
-                <div className="w-fit h-fit py-2 px-5 rounded-full bg-blue-700">
-                  Power Systems
-                </div>
-                <div className="w-fit h-fit py-2 px-5 rounded-full bg-blue-700">
-                  Fault Analysis
-                </div>
+                <div className="w-fit h-fit py-2 px-5 rounded-full bg-blue-700">Python</div>
+                <div className="w-fit h-fit py-2 px-5 rounded-full bg-blue-700">NLP</div>
+                <div className="w-fit h-fit py-2 px-5 rounded-full bg-blue-700">ML/DL</div>
+                <div className="w-fit h-fit py-2 px-5 rounded-full bg-blue-700">BERT/GPT</div>
+                <div className="w-fit h-fit py-2 px-5 rounded-full bg-blue-700">Tokenization</div>
               </div>
             </div>
           </Animate>
         </div>
 
-        {/* ZF Technology Internship */}
+        {/* News Article Summarizer Project */}
         <div className="mt-[5vh] flex flex-col gap-2 lg:w-[70vw]">
           <Animate delay={500} type="slideLeft">
             <div className="relative bg-green-700 py-5 w-full flex flex-col lg:flex-row lg:items-center rounded-md px-6 font-semibold lg:gap-5">
-              <div className="lg:text-nowrap">Electrical Engineer Intern</div>
-              <div className="font-this text-foreground/80 text-sm w-full flex">
-                @ ZF Technology <br className="lg:hidden" /> 2022 - 2023
-              </div>
+              <div className="lg:text-nowrap">News Article Summarizer</div>
+            <div className="font-this text-foreground/80 text-sm w-full flex">
+              @
+              <a
+                href="https://github.com/Potluri-Naga-Venkata-Sai/News-Article-Summarizer"
+                target="_blank"
+                className="ml-1 text-primary underline"
+              >
+                GitHub
+              </a>
+              <br className="lg:hidden" /> Aug 2025 – Sep 2025
+            </div>
             </div>
           </Animate>
 
-          <Animate delay={400} type="slideLeft">
+          <Animate delay={600} type="slideLeft">
             <div className="w-full px-6 py-3 bg-green-200 rounded-md flex flex-col gap-5">
-              <div className="flex flex-col gap-3 lg:flex-row">
-                <div>
-                  <img src="zf.svg" className="rounded-md w-42 h-20 object-contain" />
-                </div>
-                <div className="flex flex-col gap-3 lg:flex-row lg:items-center">
-                  <div className="flex items-center text-black">
-                    <FaLocationDot className="w-5 h-6 text-black mr-3" /> Chennai, India
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div className="lg:max-w-[50vw] text-black">
-                  Created MATLAB/Simulink models for power flow analysis and voltage regulation. 
-                  Developed control algorithms for power system stability and implemented HIL simulation 
-                  for Electric Vehicle component testing.
-                </div>
+              <div className="lg:max-w-[50vw] text-black">
+                • Processed news data using BeautifulSoup and newspaper3k; applied text chunking and normalization, boosting summarization coherence by 35% and reducing parsing errors by 40%. <br />
+                • Applied NLP models (Hugging Face BART, Transformers) for abstractive summarization, achieving 88% ROUGE/coherence accuracy. <br />
+                • Built and deployed a Flask-based web app with intuitive HTML/CSS interface; full end-to-end ML pipeline with 92% user satisfaction.
               </div>
               <div className="flex flex-wrap flex-grow justify-between gap-3">
-                <div className="w-fit h-fit py-2 px-5 rounded-full bg-blue-700">
-                  MATLAB
-                </div>
-                <div className="w-fit h-fit py-2 px-5 rounded-full bg-blue-700">
-                  Simulink
-                </div>
-                <div className="w-fit h-fit py-2 px-5 rounded-full bg-blue-700">
-                  HIL Simulation
-                </div>
-                <div className="w-fit h-fit py-2 px-5 rounded-full bg-blue-700">
-                  EV Systems
-                </div>
-                <div className="w-fit h-fit py-2 px-5 rounded-full bg-blue-700">
-                  Control Algorithms
-                </div>
-              </div>
-            </div>
-          </Animate>
-        </div>
-
-        {/* Sri Gajanan Internship */}
-        <div className="mt-[5vh] flex flex-col gap-2 lg:w-[70vw]" >
-          <Animate delay={300} type="slideLeft">
-            <div className="relative bg-[#740cdc] py-5 w-full flex flex-col lg:flex-row lg:items-center rounded-md px-6 font-semibold lg:gap-5">
-              <div className="lg:text-nowrap">Electrical Engineer Intern</div>
-              <div className="font-this text-foreground/60 text-sm w-full flex">
-                @ Sri Gajanan E-slates Pvt Ltd <br className="lg:hidden" /> 2021 - 2022
-              </div>
-            </div>
-          </Animate>
-
-          <Animate delay={400} type="slideLeft">
-            <div className="w-full px-6 py-3 bg-secondary/30 rounded-md flex flex-col gap-5">
-              <div className="flex flex-col gap-3 lg:flex-row">
-                <div>
-                  <img src="logo-Zauba.webp" className="rounded-md w-42 h-20 object-contain" />
-                </div>
-                <div className="flex flex-col gap-3 lg:flex-row lg:items-center">
-                  <div className="flex items-center text-foreground/70">
-                    <FaLocationDot className="w-5 h-6 text-secondary mr-3" /> Hyderabad, India
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div className="lg:max-w-[50vw]">
-                  Assisted in power distribution system design and implementation. 
-                  Conducted electrical testing, fault diagnosis, and gained hands-on experience 
-                  in substation operations including transformer maintenance and protection systems.
-                </div>
-              </div>
-              <div className="flex flex-wrap flex-grow justify-between gap-3">
-                <div className="w-fit h-fit py-2 px-5 rounded-full bg-blue-700">
-                  Power Distribution
-                </div>
-                <div className="w-fit h-fit py-2 px-5 rounded-full bg-blue-700">
-                  Substation Ops
-                </div>
-                <div className="w-fit h-fit py-2 px-5 rounded-full bg-blue-700">
-                  Transformer
-                </div>
-                <div className="w-fit h-fit py-2 px-5 rounded-full bg-blue-700">
-                  Electrical Safety
-                </div>
-                <div className="w-fit h-fit py-2 px-5 rounded-full bg-blue-700">
-                  NFPA 70E
-                </div>
+                <div className="w-fit h-fit py-2 px-5 rounded-full bg-blue-700">Python</div>
+                <div className="w-fit h-fit py-2 px-5 rounded-full bg-blue-700">Flask</div>
+                <div className="w-fit h-fit py-2 px-5 rounded-full bg-blue-700">Streamlit</div>
+                <div className="w-fit h-fit py-2 px-5 rounded-full bg-blue-700">Web Scraping</div>
+                <div className="w-fit h-fit py-2 px-5 rounded-full bg-blue-700">Hugging Face</div>
               </div>
             </div>
           </Animate>

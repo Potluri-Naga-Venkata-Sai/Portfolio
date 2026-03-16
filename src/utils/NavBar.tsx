@@ -116,16 +116,23 @@ function NavBar() {
             <div className="w-full mt-[9vh]">
               <Animate delay={200} type="slideDown">
                 <div className="w-full flex flex-col gap-2 lg:flex-row lg:justify-between lg:px-20">
-                  <div className="flex r text-xs">
+                  
+                  <div className="flex text-xs">
                     © 2025. Made with passion by{" "}
-                    <span className="font-semibold ml-1 mr-1 text-blue-600 border-b border-blue-600 cursor-pointer" onClick={()=>{
-                      window.open("mailto:venkateshdaggupati2003@gmail.com?subject=Electrical Engineering Collaboration")
-                    }}>Venky</span>&{" "}
-                    <span className="font-semibold ml-1 text-blue-600 border-b border-blue-600 cursor-pointer" onClick={()=>{window.open("mailto:afridayan01@gmail.com?subject=Software development collaboration")}}>
-                      Afrid
+                    <span
+                      className="font-semibold ml-1 mr-1 text-blue-600 border-b border-blue-600 cursor-pointer"
+                      onClick={() => {
+                        window.open(
+                          "mailto:nagavenkatasaipotluri@gmail.com?subject=Computer science Engineering(AI&ML)"
+                        );
+                      }}
+                    >
+                      Naga Venkata Sai Potluri
                     </span>
                   </div>
-                  <div className="flex r text-xs">All rights reserved</div>
+
+                  <div className="flex text-xs">All rights reserved</div>
+
                 </div>
               </Animate>
             </div>

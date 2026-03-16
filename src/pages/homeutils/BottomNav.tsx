@@ -6,11 +6,11 @@ function BottomNav() {
   function handleOpenSocialLink(type: string) {
     switch (type) {
       case "GITHUB":
-        window.open("https://github.com/VENKY-021");
+        window.open("https://github.com/Potluri-Naga-Venkata-Sai");
         break;
       case "LINKEDIN":
         window.open(
-          "https://www.linkedin.com/in/venkatesh-daggupati-115537237/"
+          "https://www.linkedin.com/in/naga-venkata-sai-potluri/"
         );
         break;
     }
@@ -18,7 +18,7 @@ function BottomNav() {
 
   function handleEmailClick() {
     const mailtoUrl =
-      "mailto:venkateshdaggupati2003@gmail.com?subject=Electrical Engineering Collaboration";
+      "mailto:nagavenkatasaipotluri@gmail.com?subject=AI & Software Collaboration";
     window.open(mailtoUrl);
   }
 
@@ -27,13 +27,12 @@ function BottomNav() {
       <div className="flex flex-col gap-10 lg:gap-3 text-center">
         <Animate delay={200} type="slideLeft">
           <h1 className="text-2xl lg:text-[40px] font-semibold">
-            Available for substation design and power systems research
+             Available for AI, ML, and Web Development Projects
           </h1>
         </Animate>
         <Animate delay={400} type="slideLeft">
           <p className="font-semibold lg:text-xs">
-            Need expertise in electrical engineering, renewable integration, or
-            AI-based fault detection?
+            Looking for interactive dashboards, AI models, or modern web apps? Let's collaborate!
           </p>
         </Animate>
       </div>
@@ -44,7 +43,7 @@ function BottomNav() {
             onClick={handleEmailClick}
             className="text-xl border-b-4 border-secondary cursor-pointer lg:hover:scale-105 lg:hover:text-primary"
           >
-            venkateshdaggupati2003@gmail.com
+            nagavenkatasaipotluri@gmail.com
           </div>
 
           <div className="text-center mt-[3vh] flex items-center justify-center gap-4">
@@ -70,27 +69,27 @@ function BottomNav() {
             <div className="flex items-center justify-center text-foreground/40 text-xs lg:text-md">
               © 2025.
               <a
-                href="mailto:venkateshdaggupati2003@gmail.com?subject=Electrical Engineering Collaboration"
+                href="mailto:nagavenkatasaipotluri@gmail.com?subject=AI & Software Collaboration"
                 className="ml-1 font-semibold text-blue-600 border-b border-blue-600"
               >
-                Venkatesh Daggupati
+                Naga Venkata Sai Potluri
               </a>{" "}
-              – Electrical Engineer
+              – AI & Software Developer
             </div>
 
             <div className="flex flex-col gap-2 mb-10 text-center items-center justify-center text-foreground/40 text-xs lg:text-md">
-              <div>Specializing in Power Systems and Renewable Energy</div>
+              <div>Specializing in Artificial Intelligence and Machine Learning</div>
               <div className="flex items-center">
                 | Developed with{" "}
                 <span
                   className="ml-1 font-semibold text-blue-600 border-b border-blue-600 cursor-pointer"
                   onClick={() =>
                     window.open(
-                      "mailto:afridayan01@gmail.com?subject=Software development collaboration"
+                      "mailto:nagavenkatasaipotluri@gmail.com?subject=Software development collaboration"
                     )
                   }
                 >
-                  Afrid
+                  Naga Venkata Sai Potluri
                 </span>
               </div>
             </div>

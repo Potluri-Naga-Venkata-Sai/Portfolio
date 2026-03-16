@@ -1,2 +1,2 @@
-export const NAME = 'Venky';
-export const ABOUT_ME = "ELECTRICAL ENGINEER, POWER SYSTEMS & SUBSTATION DESIGN SPECIALIST.";
+export const NAME = "Naga Venkata Sai Potluri";
+export const ABOUT_ME = "AI & Software Developer | Machine Learning, Data Science, and Interactive Web Applications.";

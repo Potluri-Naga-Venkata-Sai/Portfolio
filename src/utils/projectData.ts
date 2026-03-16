@@ -1,102 +1,124 @@
 export const projectData = {
-  SUBSTATION_500KV: {
-    projectTitle: "500kV Substation Design",
-    strategy: ["Safety Compliance", "Efficiency"],
-    client: "Texas Tech University",
-    technology: "AutoCAD, Revit MEP",
+
+  NEWS_SUMMARIZER: {
+    projectTitle: "News Article Summarizer",
+
+    strategy: ["Natural Language Processing", "Content Extraction"],
+
+    client: "Personal Project",
+
+    technology:
+      "Python, Hugging Face Transformers, BeautifulSoup, Streamlit, Flask",
+
     projectDesc:
-      "Designed a comprehensive 500kV substation layout including electrical schematics, grounding plans, and conduit routing. Ensured compliance with IEEE and NFPA standards while optimizing for space efficiency and maintenance access.",
+      "Developed an NLP-based application that extracts news articles from URLs and generates concise summaries using transformer models. Implemented preprocessing, text chunking and abstraction techniques to improve summarization accuracy and coherence.",
+
     images: [
-      "/substation/500kv-layout.png",
-      "/substation/grounding-plan.png",
-      "/substation/conduit-routing.png",
+      "/projects/news1.png",
+      "/projects/news2.png",
+      "/projects/news3.png",
     ],
-    openProject: false,
-    viewCode: false,
-    category: "Substation Design",
-  },
-  FAULT_DETECTION: {
-    projectTitle: "AI-Based Fault Detection",
-    strategy: ["Real-time Analysis", "Accuracy"],
-    client: "Texas Tech Research",
-    technology: "MATLAB, Python, CNN/GNN",
-    projectDesc:
-      "Developed an AI system for real-time fault detection in IEEE 9-bus transmission lines using CNN, ELM, and GNN models. Achieved 98.7% classification accuracy for various fault types including line-to-ground and three-phase faults.",
-    images: [
-      "/ai/fault-simulation.png",
-      "/ai/model-architecture.png",
-      "/ai/results-analysis.png",
-    ],
-    openProject: false,
+
+    openProject: true,
+
+    openProjectLink:
+      "https://news-article-summarizer-gd37.onrender.com",
+
     viewCode: true,
-    viewCodeLink: "https://github.com/VENKY-021/fault-detection",
-    category: "AI in Power Systems",
+
+    viewCodeLink:
+      "https://github.com/Potluri-Naga-Venkata-Sai/News_Article_Summarizer",
+
+    category: "NLP",
   },
-  MICROGRID: {
-    projectTitle: "Renewable Microgrid Integration",
-    strategy: ["Stability", "Efficiency"],
-    client: "Graduate Research",
-    technology: "MATLAB/Simulink",
+
+  CLIMATE_RISK: {
+    projectTitle: "Climate Risk Dashboard",
+
+    strategy: ["Data Visualization", "Climate Forecasting"],
+
+    client: "Personal Project",
+
+    technology:
+      "Python, Pandas, Plotly, Streamlit, Machine Learning",
+
     projectDesc:
-      "Designed and simulated a hybrid microgrid integrating solar and wind energy sources. Implemented advanced control strategies to minimize power fluctuations and optimize energy distribution under varying load conditions.",
+      "Built an interactive climate risk dashboard to analyze temperature anomalies, CO₂ trends and extreme weather indicators. Implemented machine learning based forecasting and interactive visualizations to support data-driven environmental insights.",
+
     images: [
-      "/renewable/microgrid-schematic.png",
-      "/renewable/power-flow.png",
-      "/renewable/control-system.png",
+      "/projects/climate1.png",
+      "/projects/climate2.png",
+      "/projects/climate3.png",
     ],
+
     openProject: false,
+
     viewCode: true,
-    viewCodeLink: "https://github.com/VENKY-021/microgrid-simulation",
-    category: "Renewable Energy",
+
+    viewCodeLink:
+      "https://github.com/Potluri-Naga-Venkata-Sai/Climate_Risk_Dashboard_Project",
+
+    category: "DATA",
   },
-  SNN_FAULT: {
-    projectTitle: "SNN Fault Classification",
-    strategy: ["Low Latency", "Adaptive Learning"],
-    client: "Research Project",
-    technology: "Python, TensorFlow",
+
+  PORTFOLIO_OPTIMIZATION: {
+    projectTitle: "Portfolio Optimization System",
+
+    strategy: ["Risk Analysis", "Investment Optimization"],
+
+    client: "Personal Project",
+
+    technology:
+      "Python, Pandas, NumPy, Plotly, Streamlit, Machine Learning",
+
     projectDesc:
-      "Implemented a Single Neural Network (SNN) model for transmission line fault classification, reducing detection latency by 40% compared to traditional methods. Integrated wavelet transform for feature extraction from time-series data.",
+      "Developed a portfolio optimization system that analyzes financial datasets and recommends optimal asset allocation strategies. Applied statistical analysis and machine learning to evaluate risk-return trade-offs and generate investment insights.",
+
     images: [
-      "/ai/snn-architecture.png",
-      "/ai/fault-scenarios.png",
-      "/ai/performance-metrics.png",
+      "/projects/portfolio1.png",
+      "/projects/portfolio2.png",
+      "/projects/portfolio3.png",
     ],
-    openProject: false,
+
+    openProject: true,
+
+    openProjectLink:
+      "https://portfolio-optimization-project.onrender.com",
+
     viewCode: true,
-    viewCodeLink: "https://github.com/VENKY-021/snn-fault-detection",
-    category: "AI in Power Systems",
+
+    viewCodeLink:
+      "https://github.com/Potluri-Naga-Venkata-Sai/Portfolio-Optimization-Project",
+
+    category: "DATA",
   },
-  BLDC_CONTROL: {
-    projectTitle: "BLDC Motor Control System",
-    strategy: ["Energy Efficiency", "Precision"],
-    client: "Graduate Project",
-    technology: "MATLAB, Power Electronics",
+
+  PLANT_HEALTH_AI: {
+    projectTitle: "AI Plant Health Detection",
+
+    strategy: ["Computer Vision", "Deep Learning"],
+
+    client: "Personal Project",
+
+    technology:
+      "Python, TensorFlow, CNN, OpenCV, Machine Learning",
+
     projectDesc:
-      "Designed a Luo converter-based speed control system for BLDC motors, reducing voltage ripple by 35% and improving torque stability. Optimized for renewable energy applications with variable load conditions.",
+      "Developed an AI system that detects plant diseases using computer vision and deep learning. The model analyzes plant leaf images and predicts disease categories to help farmers detect crop health issues early.",
+
     images: [
-      "/control/bldc-circuit.png",
-      "/control/speed-response.png",
-      "/control/efficiency-analysis.png",
+      "/projects/plant1.png",
+      "/projects/plant1.png",
+      "/projects/plant1.png",
     ],
+
     openProject: false,
+
     viewCode: true,
-    viewCodeLink: "https://github.com/VENKY-021/bldc-control",
-    category: "Control Systems",
-  },
-  GROUNDING_PLAN: {
-    projectTitle: "Substation Grounding System",
-    strategy: ["Safety", "IEEE Compliance"],
-    client: "ZF Technology",
-    technology: "AutoCAD, ETAP",
-    projectDesc:
-      "Developed comprehensive grounding plans for 138kV substations, ensuring step/touch potential safety limits. Performed soil resistivity analysis and optimized conductor sizing for fault current dissipation.",
-    images: [
-      "substation/grounding-design.png",
-      "substation/soil-analysis.png",
-      "substation/safety-metrics.png",
-    ],
-    openProject: false,
-    viewCode: false,
-    category: "Substation Design",
+
+    viewCodeLink:
+      "https://github.com/Potluri-Naga-Venkata-Sai/AI-driven-Plant-health-detection",
+
+    category: "AI",
   },
 };

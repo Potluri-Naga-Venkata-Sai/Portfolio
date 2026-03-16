@@ -15,19 +15,17 @@ function App() {
 
   function handleEmailClick() {
     const mailtoUrl =
-      "mailto:venkateshdaggupati2003@gmail.com?subject=Electrical Engineering Inquiry";
+      "mailto:nagavenkatasaipotluri@gmail.com?subject=AI/ML Collaboration";
     window.open(mailtoUrl);
   }
 
   function handleOpenSocialLink(type: string) {
     switch (type) {
       case "GITHUB":
-        window.open("https://github.com/VENKY-021");
+        window.open("https://github.com/Potluri-Naga-Venkata-Sai");
         break;
       case "LINKEDIN":
-        window.open(
-          "https://www.linkedin.com/in/venkatesh-daggupati-115537237/"
-        );
+        window.open("https://www.linkedin.com/in/naga-venkata-sai-potluri");
         break;
     }
   }
@@ -37,46 +35,54 @@ function App() {
       setLoading(false);
     }, 500);
   }, []);
+
   useImageLoader();
 
   return (
-    <div className="relative cursor-default text-foreground scroll-smooth">
+    <div className="relative min-h-screen cursor-default text-foreground scroll-smooth">
+      
+
+      {/* Loading Spinner */}
       {loading && <AppSpinner />}
 
+      {/* Overlay Elements */}
       {(!selectedProject ||
         selectedProject === "null" ||
         location.pathname === "/") && (
-        <div className="relative w-full h-full">
-          <div className="absolute h-[100vh] inset-0 z-[201]"></div>
-          <div className="absolute h-full w-full min-h-[100vh] z-[200]">
-            <img
-              src="cover.jpg"
-              className="object-cover h-full w-full"
-              alt="Electrical engineering background"
-            />
-          </div>
-          <div className="circle h-[50px] w-[50px] rounded-full z-[202] absolute top-[22.5vh] left-[56vw] animate-move-left-right"></div>
+        <>
+          {/* Dark overlay */}
+          <div className="fixed inset-0 bg-black/70 z-[1]"></div>
 
-          {/* Social Links Sidebar */}
-          <div className="fixed z-[999] bottom-10 flex-row justify-between w-full px-[2vw] hidden lg:flex">
+          {/* Animated circle */}
+          <div className="circle h-[50px] w-[50px] rounded-full z-[2] absolute top-[22.5vh] left-[56vw] animate-move-left-right"></div>
+
+          {/* Social Links */}
+          <div className="fixed z-[5] bottom-10 flex-row justify-between w-full px-[2vw] hidden lg:flex">
+            
             <div>
               <Animate delay={700}>
                 <div className="flex flex-row gap-6 rotate-90 items-center ml-[-12vw] justify-center">
+
                   <div className="text-center flex items-center justify-center gap-4">
+
                     <h3
                       onClick={() => handleOpenSocialLink("GITHUB")}
                       className="-rotate-90 flex items-center bg-foreground/10 rounded-md px-3 py-2 cursor-pointer lg:hover:bg-foreground/20 lg:hover:scale-105"
                     >
                       <FaGithub className="h-6 w-5" />
                     </h3>
+
                     <h3
                       onClick={() => handleOpenSocialLink("LINKEDIN")}
                       className="-rotate-90 flex items-center bg-foreground/10 rounded-md px-3 py-2 cursor-pointer lg:hover:bg-foreground/20 lg:hover:scale-105"
                     >
                       <CiLinkedin className="h-6 w-5" />
                     </h3>
+
                   </div>
+
                   <div className="w-[17vw] h-[1px] bg-[#02ffff]"></div>
+
                 </div>
               </Animate>
             </div>
@@ -84,26 +90,32 @@ function App() {
             <div>
               <Animate delay={700}>
                 <div className="flex flex-row gap-6 rotate-90 items-center -mr-[11vw]">
+
                   <div
                     onClick={handleEmailClick}
                     className="text-xs cursor-pointer lg:hover:scale-105 lg:hover:text-primary"
                   >
-                    venkateshdaggupati2003@gmail.com
+                    nagavenkatasaipotluri@gmail.com
                   </div>
+
                   <div className="w-[10vw] h-[1px] bg-[#02ffff]"></div>
+
                 </div>
               </Animate>
             </div>
+
           </div>
-        </div>
+        </>
       )}
 
-      <div className="z-[998] absolute inset-0">
+      {/* Pages */}
+      <div className="relative z-[10]">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projectdetail" element={<ProjectDetail />} />
         </Routes>
       </div>
+
     </div>
   );
 }
