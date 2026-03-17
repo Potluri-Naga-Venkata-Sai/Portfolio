@@ -51,7 +51,11 @@ function App() {
       {loading && <AppSpinner />}
 
       {/* ── Global Navigation Bar (all pages) ── */}
-      <div className="fixed top-0 inset-x-0 z-[30]">
+      <div
+        className={`fixed top-0 inset-x-0 z-[30] transition-opacity duration-300 ${
+          location.pathname === "/" ? "opacity-100" : "opacity-50 grayscale-[30%]"
+        }`}
+      >
         <NavBar />
       </div>
 
