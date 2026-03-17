@@ -1,5 +1,5 @@
 import { projectType, useAppContext } from "../utils/AppContext";
-import NavBar from "../utils/NavBar";
+
 import { MdChevronRight } from "react-icons/md";
 import BottomNav from "./homeutils/BottomNav";
 import Animate from "../utils/animations/Animate";
@@ -20,11 +20,9 @@ function ProjectDetail() {
 
   return (
     <div className="w-full h-full flex flex-col">
-      <div className="bg-transparent pt-[2vh] pl-2">
+      <div className="bg-transparent pt-20 pl-2">
 
-        <NavBar />
-
-        <div className="mt-[10vh] px-[5vw]">
+        <div className="mt-[5vh] px-[5vw]">
 
           {/* Project Title */}
           <Animate delay={150} type="slideLeft">

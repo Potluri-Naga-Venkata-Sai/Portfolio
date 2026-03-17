@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { ABOUT_ME, NAME } from "../utils/AppConstants";
 import { useAppContext } from "../utils/AppContext";
-import NavBar from "../utils/NavBar";
+
 import BottomNav from "./homeutils/BottomNav";
 import Experience from "./homeutils/Experience";
 import Projects from "./homeutils/Projects";
@@ -81,15 +81,13 @@ function Home() {
       {/* ══════════════════════════════════════════════════════════════
           HERO SECTION
       ══════════════════════════════════════════════════════════════ */}
-      <div className="min-h-[100vh] flex flex-col relative overflow-hidden">
+      <div className="min-h-[100vh] flex flex-col relative overflow-hidden pt-16 lg:pt-20">
 
         {/* Subtle dark overlay so particles stay readable */}
         <div className="absolute inset-0 bg-black/55" />
 
         {/* All decorative GSAP animations (rings, orbs, brackets, counters…) */}
         <HeroAnimations />
-
-        <NavBar />
 
         <div className="relative z-10 flex flex-col items-center justify-center flex-1 px-4 gap-6 pt-8 pb-20">
 

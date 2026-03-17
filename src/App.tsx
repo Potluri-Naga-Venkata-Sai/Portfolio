@@ -8,6 +8,7 @@ import AppSpinner from "./utils/AppSpinner";
 import { useEffect, useState } from "react";
 import useImageLoader from "./hooks/appHooks";
 import FuturisticBackground from "./utils/FuturisticBackground";
+import NavBar from "./utils/NavBar";
 
 function App() {
   const selectedProject = localStorage.getItem("selectedProject");
@@ -48,6 +49,11 @@ function App() {
 
       {/* Loading Spinner */}
       {loading && <AppSpinner />}
+
+      {/* ── Global Navigation Bar (all pages) ── */}
+      <div className="fixed top-0 inset-x-0 z-[30]">
+        <NavBar />
+      </div>
 
       {/* Overlay Elements */}
       {(!selectedProject ||
