@@ -1,10 +1,6 @@
 import { useEffect, useRef } from "react";
-import { useUpdateProjectDetails } from "../hooks/appHooks";
-import Animate from "../utils/animations/Animate";
 import { ABOUT_ME, NAME } from "../utils/AppConstants";
 import { useAppContext } from "../utils/AppContext";
-import DownwArrow from "../utils/DownArraow";
-import ExpertiseCard from "../utils/ExpertiseCard";
 import NavBar from "../utils/NavBar";
 import BottomNav from "./homeutils/BottomNav";
 import Experience from "./homeutils/Experience";
@@ -12,9 +8,13 @@ import Projects from "./homeutils/Projects";
 import AchievementsSection from "./homeutils/AchievementsSection";
 import CertificationsSection from "./homeutils/Certifications";
 import SkillsSection from "./homeutils/Skills";
+import AboutSection from "./homeutils/AboutSection";
+import HeroAnimations from "../utils/HeroAnimations";
+import Animate from "../utils/animations/Animate";
+import ExpertiseCard from "../utils/ExpertiseCard";
+import DownwArrow from "../utils/DownArraow";
 
 function Home() {
-  const { updateProjectDetails } = useUpdateProjectDetails();
 
   const expertise = [
     {
@@ -78,63 +78,96 @@ function Home() {
   return (
     <div className="w-full h-full flex flex-col">
 
-      {/* HERO SECTION WITH COVER IMAGE */}
-      <div className="min-h-[100vh] flex flex-col bg-[url('/cover.png')] bg-cover bg-center bg-no-repeat relative">
+      {/* ══════════════════════════════════════════════════════════════
+          HERO SECTION
+      ══════════════════════════════════════════════════════════════ */}
+      <div className="min-h-[100vh] flex flex-col relative overflow-hidden">
 
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black/50"></div>
+        {/* Subtle dark overlay so particles stay readable */}
+        <div className="absolute inset-0 bg-black/55" />
+
+        {/* All decorative GSAP animations (rings, orbs, brackets, counters…) */}
+        <HeroAnimations />
 
         <NavBar />
 
-        <div className="relative p-3 flex flex-col justify-between py-10 h-[85vh]">
-          <div className="flex flex-col justify-center gap-3 mt-[25vh] lg:mt-[15vh] items-center">
+        <div className="relative z-10 flex flex-col items-center justify-center flex-1 px-4 gap-6 pt-8 pb-20">
 
-            <Animate delay={450}>
-              <h1 className="typewriter text-[40px] font-bold lg:text-[150px]">
-                {NAME.toUpperCase()}
-              </h1>
-            </Animate>
+          {/* ── Role badge ─────────────────────────────────────────── */}
+          <Animate delay={200} type="slideDown">
+            <div className="flex items-center gap-2 border border-cyan-500/30 rounded-full px-4 py-1.5 bg-cyan-500/8 backdrop-blur-sm">
+              <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+              <span className="text-cyan-400 text-xs lg:text-sm font-mono tracking-wider">
+                AI &amp; ML Engineer · Open to Opportunities
+              </span>
+            </div>
+          </Animate>
 
-            <Animate delay={600}>
-              <p className="w-[70vw] text-xl text-center lg:text-2xl lg:-mt-10">
-                {ABOUT_ME}
-              </p>
-            </Animate>
+          {/* ── Name ───────────────────────────────────────────────── */}
+          <Animate delay={400}>
+            <h1
+              className="typewriter font-bold text-center leading-tight"
+              style={{ fontSize: "clamp(26px, 5.2vw, 88px)" }}
+            >
+              {NAME.toUpperCase()}
+            </h1>
+          </Animate>
 
-          </div>
+          {/* ── Tagline ────────────────────────────────────────────── */}
+          <Animate delay={600}>
+            <p className="text-center text-foreground/70 max-w-[65vw] lg:max-w-[50vw] text-base lg:text-xl leading-relaxed">
+              {ABOUT_ME}
+            </p>
+          </Animate>
 
-          {/* RESUME */}
-          <div className="flex justify-center w-full">
+          {/* ── Animated role chips ────────────────────────────────── */}
+          <Animate delay={700}>
+            <div className="flex flex-wrap gap-2 justify-center mt-1">
+              {["NLP", "Deep Learning", "Data Science", "Computer Vision", "React"].map((tag) => (
+                <span
+                  key={tag}
+                  className="text-[11px] lg:text-xs font-mono px-3 py-1 rounded-full border border-white/10 bg-white/5 text-foreground/60"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </Animate>
 
-            <Animate delay={400}>
+          {/* ── CTA buttons ────────────────────────────────────────── */}
+          <Animate delay={800}>
+            <div className="flex gap-4 mt-2">
               <div
                 onClick={handleHireMeClick}
-                className="hover:lg:scale-110 hover:lg:bg-[#02ffff]/90 bg-[#02ffff] w-fit px-6 lg:px-12 lg:text-xl cursor-pointer py-2 lg:py-3 flex items-center rounded-full text-black"
+                className="cursor-pointer bg-cyan-400 hover:bg-cyan-300 text-black font-semibold
+                           px-6 lg:px-10 py-2.5 lg:py-3 rounded-full text-sm lg:text-base
+                           transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/30"
               >
                 Download Resume
               </div>
-            </Animate>
+              <div
+                onClick={() => {
+                  dispatch({ type: "setScrollView", payload: "WORK" });
+                  setTimeout(() => dispatch({ type: "setScrollView", payload: undefined }), 400);
+                }}
+                className="cursor-pointer border border-cyan-400/40 hover:border-cyan-400 text-cyan-400
+                           px-6 lg:px-10 py-2.5 lg:py-3 rounded-full text-sm lg:text-base
+                           transition-all duration-300 hover:scale-105 hover:bg-cyan-400/5"
+              >
+                View Work
+              </div>
+            </div>
+          </Animate>
 
-            <a
-              href="/resume.pdf"
-              download={true}
-              ref={resumeRef}
-              className="hidden"
-            >
-              Resume
-            </a>
+          <a href="/resume.pdf" download ref={resumeRef} className="hidden">Resume</a>
 
-          </div>
-
-          {/* SCROLL */}
-          <Animate delay={750}>
+          {/* ── Scroll indicator ───────────────────────────────────── */}
+          <Animate delay={1000}>
             <div
-              className="w-full flex items-center justify-center"
+              className="mt-4 cursor-pointer"
               onClick={() => {
-                dispatch({ type: "setScrollView", payload: "EXPERTISE" });
-                setTimeout(() => {
-                  dispatch({ type: "setScrollView", payload: undefined });
-                }, 400);
+                dispatch({ type: "setScrollView", payload: "ABOUT" });
+                setTimeout(() => dispatch({ type: "setScrollView", payload: undefined }), 400);
               }}
             >
               <DownwArrow />
@@ -144,19 +177,27 @@ function Home() {
         </div>
       </div>
 
-      {/* REST OF THE PAGE */}
-      <div className="bg-black -mt-4 lg:-mt-0 w-full">
+      {/* ══════════════════════════════════════════════════════════════
+          REST OF PAGE
+      ══════════════════════════════════════════════════════════════ */}
+      <div className="bg-transparent w-full">
 
+        {/* About & Education — immediately after hero */}
+        <div ref={scrollView === "ABOUT" ? targetDivRef : null}>
+          <AboutSection />
+        </div>
+
+        {/* Expertise */}
         <div
           ref={scrollView === "EXPERTISE" ? targetDivRef : null}
-          className="mt-[20vh] font-bold w-full flex items-center justify-center text-4xl"
+          className="mt-[14vh] font-bold w-full flex items-center justify-center text-4xl"
         >
           <Animate delay={250} type="slideLeft">
             <h1>My Expertise</h1>
           </Animate>
         </div>
 
-        <div className="px-4 mt-[8vh]">
+        <div className="px-4 mt-[6vh]">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {expertise?.map((item, index) => (
               <ExpertiseCard
@@ -175,7 +216,7 @@ function Home() {
           <SkillsSection />
         </div>
 
-        <div className="pb-[5vh]">
+        <div ref={scrollView === "WORK" ? targetDivRef : null} className="pb-[5vh]">
           <Projects />
         </div>
 

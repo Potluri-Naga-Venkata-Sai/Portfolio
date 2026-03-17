@@ -108,7 +108,7 @@ function NavBar() {
                     }}
                     className="cursor-pointer"
                   >
-                    ⚡️ Conatct
+                    ⚡️ Contact
                   </div>{" "}
                 </Animate>
               </div>
@@ -224,7 +224,7 @@ function NavBar() {
             <div className="flex items-center gap-2">
               ⚡️{" "}
               <span className="lg:hover:border-b lg:border-primary">
-                Conatct
+                Contact
               </span>
             </div>
             <a className=" absolute -top-2 font-thin -right-2 text-foreground/50 text-xs ">

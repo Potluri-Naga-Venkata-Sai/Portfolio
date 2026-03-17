@@ -60,6 +60,13 @@ img {
 
 body {
   font-family: "Roboto Mono", monospace;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -79,12 +86,13 @@ h2 {
 .typewriter {
   overflow: hidden;
   white-space: nowrap;
+  width: max-content;
+  max-width: 96vw;
   margin: 0 auto;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.08em;
   position: relative;
-  display: inline-block;
-  font-size: 2rem;
-  animation: typing 2s steps(40, end), blink-caret 0.75s step-end infinite;
+  display: block;
+  animation: typing 2s steps(30, end) forwards, blink-caret 0.75s step-end infinite;
   color: #02ffff;
 }
 

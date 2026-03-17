@@ -7,6 +7,7 @@ import { CiLinkedin } from "react-icons/ci";
 import AppSpinner from "./utils/AppSpinner";
 import { useEffect, useState } from "react";
 import useImageLoader from "./hooks/appHooks";
+import FuturisticBackground from "./utils/FuturisticBackground";
 
 function App() {
   const selectedProject = localStorage.getItem("selectedProject");
@@ -40,7 +41,10 @@ function App() {
 
   return (
     <div className="relative min-h-screen cursor-default text-foreground scroll-smooth">
-      
+      {/* Futuristic Background */}
+      <FuturisticBackground />
+
+
 
       {/* Loading Spinner */}
       {loading && <AppSpinner />}
@@ -57,9 +61,9 @@ function App() {
           <div className="circle h-[50px] w-[50px] rounded-full z-[2] absolute top-[22.5vh] left-[56vw] animate-move-left-right"></div>
 
           {/* Social Links */}
-          <div className="fixed z-[5] bottom-10 flex-row justify-between w-full px-[2vw] hidden lg:flex">
+          <div className="fixed z-[20] bottom-10 flex-row justify-between w-full px-[2vw] hidden lg:flex pointer-events-none">
             
-            <div>
+            <div className="pointer-events-auto">
               <Animate delay={700}>
                 <div className="flex flex-row gap-6 rotate-90 items-center ml-[-12vw] justify-center">
 
@@ -87,7 +91,7 @@ function App() {
               </Animate>
             </div>
 
-            <div>
+            <div className="pointer-events-auto">
               <Animate delay={700}>
                 <div className="flex flex-row gap-6 rotate-90 items-center -mr-[11vw]">
 

@@ -108,8 +108,6 @@ export const projectData = {
 
     images: [
       "/projects/plant1.png",
-      "/projects/plant1.png",
-      "/projects/plant1.png",
     ],
 
     openProject: false,

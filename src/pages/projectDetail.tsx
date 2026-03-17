@@ -20,7 +20,7 @@ function ProjectDetail() {
 
   return (
     <div className="w-full h-full flex flex-col">
-      <div className="bg-black pt-[2vh] pl-2">
+      <div className="bg-transparent pt-[2vh] pl-2">
 
         <NavBar />
 
